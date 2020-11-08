@@ -11,7 +11,15 @@ Flatiron Kitchen started off as a bubble tea bar in the corner of Flatiron Schoo
 Things used to be simpler when there were only a few chefs at Flatiron Kitchen, but now that it's expanding an application is needed to keep track of all of the world-class recipes.
 
 We need to be able to track which ingredients the restaurant has available and which ingredients are used in each recipe.
-
+Ingredient
+- has many recipe_ingredients
+- has many recipes through recipe_ingredients
+recipe_ingredient
+- belongs to ingredient
+-belongs to recipe
+Recipe
+- has many recipe_ingredients
+- has many ingredients through recipe_ingredients
 Your application should use a join table called "recipe_ingredients" to keep track of the ingredients for each recipe.
 
 Build your site so that it passes the tests in spec/features. There aren't tests for index pages or things like page headers or links, but feel free to add these (otherwise your app will be difficult to navigate).
